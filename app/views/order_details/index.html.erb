@@ -1,0 +1,25 @@
+<h1>Your Order Details</h1>
+
+<tr><th><%= @order.location %></th><br><th><%= @order.delivery_date %>
+<table class="table table-striped">
+<% if @order.order_details.count > 0 %>
+  <tr><th>Qty</th><th>Desc</th><th>Price</th></tr>
+  <% tot_price = 0 %>
+  <% @order.order_details.each do |od| %>
+    <% tot_price += od.extended_price %>
+    <tr>
+      <td><%= od.quantity %></td>
+      <td><%= od.product.name %></td>
+      <td><%= od.extended_price %></td>
+    </tr>
+  <% end %>
+
+  <!-- need to sum up feed, extended_price counts and show in table footer -->
+
+<% else %>
+  <tr><td colspan="3">No Items Selected Yet</td></tr>
+
+<% end %>
+</table>
+
+
