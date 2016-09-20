@@ -21,4 +21,11 @@ class OrderDetailsController < ApplicationController
     format.json { head :no_content }
     end
   end
+
+  def add
+    product = Product.find(params[:product_id])
+    order = current_user.orders.last
+    order.order_details << OrderDetail.create(unit: 1, product: product)
+    redirect_to order_order_details_path(order)
+  end
 end

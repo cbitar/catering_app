@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   resources :orders do
     resources :order_details
   end
+  post '/add_product/:product_id', to: 'order_details#add', as: 'add_product'
+
 
   resources :sessions, only: [:new, :create, :destroy]
   get '/login', to: 'sessions#new'

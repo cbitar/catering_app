@@ -1,18 +1,28 @@
 <h1>Your Order Details</h1>
 
 <tr><th><%= @order.location %></th><br><th><%= @order.delivery_date %>
+<%= link_to 'The Menu', products_path %>
 <table class="table table-striped">
 <% if @order.order_details.count > 0 %>
-  <tr><th>Qty</th><th>Desc</th><th>Price</th></tr>
+  <tr><th>Qty</th><th>Name</th><th>Price</th><th>People Fed</th><th>Desc</th></tr>
   <% tot_price = 0 %>
   <% @order.order_details.each do |od| %>
     <% tot_price += od.extended_price %>
     <tr>
-      <td><%= od.quantity %></td>
+      <td><%= od.unit %></td>
       <td><%= od.product.name %></td>
       <td><%= od.extended_price %></td>
+      <td><%= od.product.people_fed %></td>
+      <td><%= od.product.description %></td>
+
     </tr>
   <% end %>
+
+
+  <h3>$</h3><%= @order.total %>
+
+  <h3>Number of People Fed</h3><%= @order.total_people %>
+
 
   <!-- need to sum up feed, extended_price counts and show in table footer -->
 
