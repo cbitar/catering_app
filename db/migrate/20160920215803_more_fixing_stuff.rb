@@ -1,7 +1,7 @@
 class MoreFixingStuff < ActiveRecord::Migration
   def change
-    remove_column :products, :unit, :integer
-    remove_column :order_details, :quantity, :float
-    add_column :order_details, :unit, :integer
+    change_column :products, :unit, :string
+    change_column :order_details, :quantity, :integer
+    remove_column :orders, :order_date
   end
 end

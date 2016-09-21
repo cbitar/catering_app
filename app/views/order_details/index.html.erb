@@ -1,27 +1,35 @@
 <h1>Your Order Details</h1>
+<h3>
+  Total: $<span class="text-info"><%= sprintf("%.2f", @order.total) %></span>
+  <%= link_to 'Add Items to Order', products_path, class: "btn btn-success pull-right"%>
+</h3>
+<h3>Number of People Fed: <span class="text-info"><%= @order.total_people %></span></h3>
 
-<tr><th><%= @order.location %></th><br><th><%= @order.delivery_date %>
-<%= link_to 'The Menu', products_path %>
+<h5>Deliver to: <%= @order.location.empty? ? 'Pick Up' : @order.location %></h5>
+<h5>Deliver on: <%= @order.delivery_date %></h5>
+
 <table class="table table-striped">
 <% if @order.order_details.count > 0 %>
-  <tr><th>Qty</th><th>Name</th><th>Price</th><th>People Fed</th><th>Desc</th></tr>
+  <tr><th></th><th>Qty</th><th><th>Unit</th></th><th>Name</th><th>Price</th><th>People Fed</th><th>Desc</th><th>Delete</th></tr>
   <% tot_price = 0 %>
   <% @order.order_details.each do |od| %>
     <% tot_price += od.extended_price %>
     <tr>
-      <td><%= od.unit %></td>
+      <td></td>
+      <td><%= od.quantity %></td>
+      <td></td>
+      <td><%= od.product.unit %></td>
       <td><%= od.product.name %></td>
       <td><%= od.extended_price %></td>
       <td><%= od.product.people_fed %></td>
       <td><%= od.product.description %></td>
-
+      <td>
+        <%= link_to '<i class="glyphicon glyphicon-remove"></i>'.html_safe, order_order_detail_path(@order, od), method: :delete %>
+      </td>
     </tr>
   <% end %>
 
 
-  <h3>$</h3><%= @order.total %>
-
-  <h3>Number of People Fed</h3><%= @order.total_people %>
 
 
   <!-- need to sum up feed, extended_price counts and show in table footer -->

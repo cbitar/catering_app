@@ -15,7 +15,6 @@ class OrdersController < ApplicationController
 
   def create
     @order = Order.new
-    puts params
     @order.delivery_date = (params[:order][:delivery_date]).to_datetime
     @order.location = params[:order][:location]
     @order.customer = current_user

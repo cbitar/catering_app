@@ -37,11 +37,10 @@ ActiveRecord::Schema.define(version: 20160920215803) do
     t.integer  "product_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer  "unit"
+    t.integer  "quantity"
   end
 
   create_table "orders", force: :cascade do |t|
-    t.date     "order_date"
     t.date     "delivery_date"
     t.string   "location"
     t.datetime "created_at",    null: false
@@ -60,6 +59,7 @@ ActiveRecord::Schema.define(version: 20160920215803) do
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
     t.integer  "price"
+    t.string   "unit"
   end
 
   add_index "products", ["price"], name: "index_products_on_price", using: :btree

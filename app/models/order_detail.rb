@@ -3,10 +3,10 @@ class OrderDetail < ActiveRecord::Base
   belongs_to :product
 
   def extended_price
-    unit * product.price
+    quantity * product.price
   end
 
   def people_fed
-    unit * product.people_fed
+    quantity * product.people_fed
    end
 end
