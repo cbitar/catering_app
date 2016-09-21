@@ -59,6 +59,20 @@ price: 11.60 ,
  people_fed: 1,
  description: "succulent smoked New York steak done Califonia Style",
 })
+smkhm = Product.create({
+price: 10.60 ,
+ unit: "12 oz",
+ name: "Smoked Premium Ham",
+ people_fed: 4,
+ description: "succulent ham smoked for 6 hours",
+})
+nysmk = Product.create({
+price: 11.60 ,
+ unit: "8 oz",
+ name: "Smoked New York Steak",
+ people_fed: 1,
+ description: "succulent smoked New York steak done Califonia Style",
+})
 
 
 
