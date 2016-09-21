@@ -17,11 +17,23 @@
 
   <div class="field">
     <%= f.label :delivery_date %>
-    <%= f.text_field :delivery_date %>
+    <div class="form-group col-xs-4">
+      <div id="dt-picker" class="input-group date">
+        <%= f.text_field :delivery_date, class: "form-control" %>
+        <span class="input-group-addon">
+          <span class="glyphicon glyphicon-calendar"></span>
+        </span>
+      </div>
+    </div>
+    <script type="text/javascript">
+        $(function () {
+            $('#dt-picker').datetimepicker();
+        });
+    </script>
   </div>
-    <div class="field">
-    <%= f.label :location %>
-    <%= f.text_field :location %>
+    <div class="field col-xs-4">
+    <%= f.label :location, "Delivery Address" %>
+    <%= f.text_field :location, class: "form-control"  %>
   </div>
   <div class="actions"><%= f.submit %></div>
 

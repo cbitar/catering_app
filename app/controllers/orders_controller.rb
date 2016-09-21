@@ -15,7 +15,7 @@ class OrdersController < ApplicationController
 
   def create
     @order = Order.new
-    @order.delivery_date = (params[:order][:delivery_date]).to_datetime
+    @order.delivery_date = DateTime.strptime(params[:order][:delivery_date], "%m/%d/%Y %H:%M %p")
     @order.location = params[:order][:location]
     @order.customer = current_user
     if @order.save

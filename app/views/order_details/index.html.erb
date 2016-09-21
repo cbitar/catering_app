@@ -6,7 +6,7 @@
 <h3>Number of People Fed: <span class="text-info"><%= @order.total_people %></span></h3>
 
 <h5>Deliver to: <%= @order.location.empty? ? 'Pick Up' : @order.location %></h5>
-<h5>Deliver on: <%= @order.delivery_date %></h5>
+<h5>Deliver on: <%= @order.delivery_date.strftime("%m/%d/%Y %l:%M %p") %></h5>
 
 <table class="table table-striped">
 <% if @order.order_details.count > 0 %>
