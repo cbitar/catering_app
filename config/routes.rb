@@ -9,9 +9,10 @@ Rails.application.routes.draw do
   resources :orders do
     resources :order_details
   end
+
   post '/add_product/:product_id', to: 'order_details#add', as: 'add_product'
-  post '/inc_product/:product_id', to: 'order_details#inc', as: 'inc_product'
-  post '/dec_product/:product_id', to: 'order_details#dec', as: 'dec_product'
+  post '/inc_product/:order_detail_id', to: 'order_details#inc', as: 'inc_product'
+  post '/dec_product/:order_detail_id', to: 'order_details#dec', as: 'dec_product'
 
 
   resources :sessions, only: [:new, :create, :destroy]

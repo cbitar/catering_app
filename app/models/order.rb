@@ -13,7 +13,7 @@ class Order < ActiveRecord::Base
   def total_people
     total = 0
     order_details.each do |od|
-      total += od.product.people_fed
+      total += od.people_fed
     end
     return total
   end

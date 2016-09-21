@@ -1,7 +1,7 @@
 class OrderDetailsController < ApplicationController
 
   def index
-    @order = Order.find(params[:order_id])
+    @order = Order.includes(:order_details).order("order_details.id").find(params[:order_id])
   end
 
   def show
@@ -31,16 +31,25 @@ class OrderDetailsController < ApplicationController
   end
 
   def inc
-    product = OrderDetail.find_by(user_id: current_user.id, product_id: params[:product_id])
-    product.quantity += 1
-    product.save
-    redirect_to order_order_details_path(current_user.orders.last)
+    # TODO find order detail for product
+    order_detail = OrderDetail.find(params[:order_detail_id])
+    order_detail.quantity += 1
+    order_detail.save
+    # and increase quantity by 1
+    # redirect to order detail index
+    redirect_to :back
+    #add flash notice about changing quanitiy
   end
 
   def dec
-    product = OrderDetail.find_by(user_id: current_user.id, product_id: params[:product_id])
-    product.quantity -= 1 if product.quantity > 0
-    product.save
-    redirect_to order_order_details_path(current_user.orders.last)
+    #TODO find order detail for product
+    order_detail = OrderDetail.find(params[:order_detail_id])
+    # and decrease quantity by 1
+    if order_detail.quantity > 1
+    order_detail.quantity -= 1
+    order_detail.save
+    #redirect to order detail index
+    redirect_to :back
+  end
   end
 end

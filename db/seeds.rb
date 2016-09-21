@@ -4,7 +4,7 @@ Product.destroy_all
 
 
 bb_ribs = Product.create({
-  price: 14.00,
+  price: 12.00,
   unit: "full-rack",
   name: "Baby Back Ribs",
   people_fed: 2,
@@ -66,12 +66,19 @@ price: 10.60 ,
  people_fed: 4,
  description: "succulent ham smoked for 6 hours",
 })
-nysmk = Product.create({
-price: 11.60 ,
- unit: "8 oz",
- name: "Smoked New York Steak",
+smkbf = Product.create({
+price: 6.60 ,
+ unit: "2 links",
+ name: "Smoked Beef Links",
  people_fed: 1,
- description: "succulent smoked New York steak done Califonia Style",
+ description: "premium smoked beef link",
+})
+hnybkrbs = Product.create({
+price: 12.00 ,
+ unit: "full-rack",
+ name: "Honey Baked Baby Back Ribs",
+ people_fed: 1,
+ description: "honey baked baby back ribs cooked to perfection",
 })
 
 

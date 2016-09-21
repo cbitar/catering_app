@@ -15,9 +15,9 @@
   <% @order.order_details.each do |od| %>
     <% tot_price += od.extended_price %>
     <tr>
-      <td><%= link_to '<i class="glyphicon glyphicon-minus sign"></i>'.html_safe, edit_order_order_detail_path(@order, od), method: :get %></td>
+      <td><%= link_to '<i class="glyphicon glyphicon-minus sign"></i>'.html_safe, dec_product_path(od), method: :post %></td>
       <td><%= od.quantity %></td>
-      <td></td>
+      <td><%= link_to '<i class="glyphicon glyphicon-plus sign"></i>'.html_safe, inc_product_path(od), method: :post %></td>
       <td><%= od.product.unit %></td>
       <td><%= od.product.name %></td>
       <td><%= od.extended_price %></td>
