@@ -83,12 +83,3 @@ price: 12.00 ,
 
 
 
-o1 = Order.create({
- delivery_date: Date.new(2016,9,30) ,
- location: 'Bellflower'
-})
-
-od1 = OrderDetail.create({order: o1,
- product: bb_ribs,
- quantity: 15,
-}
