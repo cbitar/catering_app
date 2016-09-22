@@ -16,7 +16,5 @@ class Order < ActiveRecord::Base
       total += od.people_fed
     end
     return total
-  end
-
-  # validates :location, presence: true
+  end  # validates :location, presence: true
 end

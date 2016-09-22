@@ -1,5 +1,6 @@
 <h1>Log In</h1>
-  <form class="form-inline">
+
+
      <p id="alert"><%= alert %></p>
       <%= form_tag sessions_path do %>
     <div class="field form-group">
@@ -11,7 +12,7 @@
     </div>
       <div class="actions">
       <%= submit_tag "Log In", class: "btn btn-success" %>
-      <p>Already Logged In?</p><%= link_to 'Order Now', new_order_path %>
       </div>
+      <p>Already Logged In?</p><%= link_to 'Order Now', new_order_path %>
       <% end %>
-  </form>
+
