@@ -14,6 +14,8 @@ Rails.application.routes.draw do
   post '/inc_product/:order_detail_id', to: 'order_details#inc', as: 'inc_product'
   post '/dec_product/:order_detail_id', to: 'order_details#dec', as: 'dec_product'
 
+  patch '/orders/:id/done', to: 'orders#done', as: 'order_done'
+
 
   resources :sessions, only: [:new, :create, :destroy]
   get '/login', to: 'sessions#new'

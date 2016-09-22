@@ -4,6 +4,10 @@ class CustomersController < ApplicationController
     @customers = Customer.all
   end
 
+  def show
+    @pending_order = Order.find_by(customer_id: current_user.id, complete: false)
+  end
+
   def new
     @customer = Customer.new
   end

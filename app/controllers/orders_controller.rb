@@ -35,4 +35,10 @@ class OrdersController < ApplicationController
 
   def destroy
   end
+
+  def done
+    @order = Order.find(params[:id])
+    @order.complete = true
+    @order.save
+  end
 end

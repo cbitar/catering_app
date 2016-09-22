@@ -18,9 +18,9 @@ class OrderDetailsController < ApplicationController
   end
 
   def destroy
-    @order_details = OrderDetail.find(params[:id])
-    @order_details.destroy
-     redirect_to order_order_details_path(params[:order_id])
+      @order_details = OrderDetail.find(params[:id])
+      @order_details.destroy
+      redirect_to order_order_details_path(params[:order_id])
   end
 
   def add
@@ -46,10 +46,10 @@ class OrderDetailsController < ApplicationController
     order_detail = OrderDetail.find(params[:order_detail_id])
     # and decrease quantity by 1
     if order_detail.quantity > 1
-    order_detail.quantity -= 1
-    order_detail.save
-    #redirect to order detail index
+      order_detail.quantity -= 1
+      order_detail.save
+      #redirect to order detail index
+    end
     redirect_to :back
-  end
   end
 end

@@ -3,6 +3,7 @@
     <h3>
       Total: $<span class="text-info"><%= sprintf("%.2f", @order.total) %></span>
       <%= link_to 'Add Items to Order', products_path, class: "btn btn-success pull-right"%>
+      <%= link_to 'Done', order_done_path(@order), method: "patch", class: "btn btn-success pull-right"%>
     </h3>
     <h3>Total People Fed: <span class="text-info"><%= @order.total_people %></span></h3>
 
@@ -18,13 +19,13 @@
       <% tot_price += od.extended_price %>
       <tr>
         <td><%= link_to '<i class="glyphicon glyphicon-minus sign"></i>'.html_safe, dec_product_path(od), method: :post %></td>
-        <td><%= od.quantity %></td>
-        <td><%= link_to '<i class="glyphicon glyphicon-plus sign"></i>'.html_safe, inc_product_path(od), method: :post %></td>
-        <td><%= od.product.unit %></td>
-        <td><%= od.product.name %></td>
-        <td><%= od.extended_price %></td>
-        <td><%= od.product.people_fed %></td>
-        <td><%= od.product.description %></td>
+        <td class="od"><%= od.quantity %></td>
+        <td class="od"><%= link_to '<i class="glyphicon glyphicon-plus sign"></i>'.html_safe, inc_product_path(od), method: :post %></td>
+        <td class="od"><%= od.product.unit %></td>
+        <td class="od"><%= od.product.name %></td>
+        <td class="od"><%= od.extended_price %></td>
+        <td class="od"><%= od.product.people_fed %></td>
+        <td class="od"><%= od.product.description %></td>
         <td>
           <%= link_to '<i class="glyphicon glyphicon-remove"></i>'.html_safe, order_order_detail_path(@order, od), method: :delete %>
         </td>

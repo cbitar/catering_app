@@ -46,6 +46,13 @@ h1, h2, h3, p {
   background-color: rgba(0, 0, 0, 0.72);
 }
 
+.btn-success {
+    color: white;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+    margin-top: 78px;
+}
+
  a:hover {
   background-color: #ffb942;
 }
@@ -62,10 +69,15 @@ input[type="submit"] {
   margin: 20px 7px 24px 0px;
   background-color: #fbb942;
   border: 1px solid #ffb942;
+  margin-top: 78px;
 }
 
 .container{
   text-align: left;
+}
+.newod {
+  text-align: center;
+  margin-left: -16px;
 }
 .table-responsive {
   text-align: left;
@@ -81,14 +93,15 @@ label {
   font-weight: bold;
   float: left;
   color: white;
+  margin-right: 26px;
 }
 
 td {
-  color:white;
+  color:black;
 }
 
 th {
-  background-color: lightgrey;
+  background-color: grey;
   color: #ffb942;
 }
 .container-od {
@@ -117,4 +130,51 @@ th {
   -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
   -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+
+.add {
+  margin-right: 10px;
+  width: 78%;
+}
+
+ .deladdress{
+    // display: block;
+    // width: 58%;
+    // height: 34px;
+    // padding: 6px 12px;
+    // font-size: 14px;
+    // line-height: 1.428571429;
+    // color: #555555;
+    // /* background-color: #fff; */
+    // background-image: none;
+    // /* border: 1px solid #ccc; */
+    // border-radius: 4px;
+    // -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    // box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    // -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    // -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    // transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    // padding-left: 13px;
+}
+
+#lg {
+  margin-top: 7px;
+}
+
+h5, .h5 {
+    font-size: 14px;
+    color: lightgrey;
+}
+
+.od {
+  color: white;
+}
+.start {
+  margin-right: 9px;
+}
+.btn-success {
+    color: #fff;
+    background-color: #fbb942;
+    border-color: #fbb942;
+    margin-top: 20px;
 }

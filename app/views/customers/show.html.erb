@@ -1,3 +1,8 @@
 <h1>Welcome Back <%= current_user.name %></h1>
 
-  <%= link_to 'Order Now', new_order_path %>
+
+  <% if @pending_order %>
+    <%= link_to 'Continue Your Order?', order_order_details_path(@pending_order), class: "btn btn-success pull-left"%>
+  <% else %>
+    <%= link_to 'Start New Order', new_order_path, class: "btn btn-success pull-left start" %>
+  <% end %>
