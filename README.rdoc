@@ -1,7 +1,46 @@
-== README
+== README ==
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+technologies used:
+
+- Ruby on Rails (Ruby 4)
+- Html5
+- CSS3
+- Javascript
+- Heroku
+- Git
+
+Links:
+
+Trello - https://trello.com/b/0jN7nRb7/catering-crud-app
+Heroku - https://cater-hambones.herokuapp.com/
+
+
+Installation Instructions:
+
+1. Deploy Application using Heroku
+2. Application dependent on information provided through Sign Up or Log In
+3. Sign up as a customer providing details required
+4. Start an order
+5. Provide order details
+6. Add menu items to order
+7. Review order
+8. Submit order
+9. Receive email confirmation with order details
+
+
+Unsolved Problems:
+
+1. Still hoping to add e-commerce to the site allowing customers to pay online
+2. Cleaning up the menu view through the addition of categories selected categorial views ex: Meats
+3. Addition of another model, Restaurant, in order to provide a choice for picking up food at either restaurant location.
+4. Additional features including delivery price and price of waiting service if customer so chooses
+4. Creation of an Admin User that has the ability to update the menu easily
+5. General debugging of application
+6. Addition of text-box for additional information
+7. Creation of a landing page for Home tab in navigation bar
+8. Eventually would like the addition of images for each menu item
+9. Need the addition of Action Mailer in order to give customers a receipt of their order
+
 
 Things you may want to cover:
 
