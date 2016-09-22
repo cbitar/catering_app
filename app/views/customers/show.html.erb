@@ -1,8 +1,13 @@
-<h1>Welcome Back <%= current_user.name %></h1>
+
+<div class="container-fluid welcomepg">
+
+<h1>Welcome Back <br> <%= current_user.name %></h1>
 
 
   <% if @pending_order %>
     <%= link_to 'Continue Your Order?', order_order_details_path(@pending_order), class: "btn btn-success pull-left"%>
+    <%= link_to 'New Order', new_order_path, class: "btn btn-success pull-right"%>
   <% else %>
     <%= link_to 'Start New Order', new_order_path, class: "btn btn-success pull-left start" %>
   <% end %>
+</div>

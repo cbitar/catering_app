@@ -15,12 +15,17 @@
   <% end %>
   <!-- adjust to number of guests in order model -->
 
-  <p class="help-block">You Must Select a Date Before Moving On</p>
-  <div class="field container-fluid newod ">
-    <%= f.label :delivery_date, "Delivery Date & Time", placeholder:"Delivery Date & Time" %>
+  <br>
+
+  <p class="help-block">You Must Be Logged In to Order</p>
+  <p class="help-block">You Must Select a Date and Time Before Moving On</p>
+  <p class="help-block">Leave Address Blank for Pick Up</p>
+  <br>
+  <div class="field">
+    <%= f.label :delivery_date, "Delivery Date & Time", placeholder:"Delivery Date & Time", class: "col-xs-4"%>
     <div class="form-group col-xs-4">
       <div id="dt-picker" class="input-group date">
-        <%= f.text_field :delivery_date, value: @order.delivery_date, class: "form-control" %>
+        <%= f.text_field :delivery_date, value: @order.delivery_date, class: "form-control row" %>
         <span class="input-group-addon">
           <span class="glyphicon glyphicon-calendar"></span>
         </span>
@@ -32,14 +37,13 @@
         });
     </script>
   </div>
-    <div class="field col-xs-4">
-    <%= f.label :location, "Delivery Address", placeholder: "Delivery Address", class:"add row" %>
-    <%= f.text_field :location, class: "form-control deladdress row"  %>
+    <div class="field">
+    <%= f.label :location, "Delivery Address", placeholder: "Delivery Address", class: "col-xs-4" %>
+    <%= f.text_field :location, class: "form-control row hatecss"  %>
   </div>
-    <p class="help-block">Leave Blank for Pick Up</p>
   <div class="actions"><%= f.submit class:"btn btn-success pull-left" %></div>
 
-
+<!-- class:"add row", to f.label :location    container-fluid newod- div field -->
 
 
 <% end %>
