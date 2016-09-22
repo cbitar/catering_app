@@ -11,8 +11,9 @@ class CustomersController < ApplicationController
   def create
     @customer = Customer.new(customer_params)
     if @customer.save
+      session[:customer_id] = @customer.id
       flash[:notice] = "You have successfully signed up!"
-      redirect_to root_path
+      redirect_to new_order_path
     else
       render :new
     end
