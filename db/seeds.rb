@@ -192,7 +192,3 @@ price: 50.00,
  people_fed: 20,
  description: "don't leave without trying our famous Hambone's banana pudding with vanilla wafers",
 })
-
-
-
-
