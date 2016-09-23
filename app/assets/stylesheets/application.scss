@@ -70,7 +70,7 @@ input[type="submit"] {
   background-color: #fbb942;
   border: 1px solid #ffb942;
   margin-top: 25px;
-  margin-left: 167px;
+  margin-left: 246px;
 }
 
 #customerbutton {
@@ -174,7 +174,12 @@ th {
  }
 
 #lg {
-  margin-top: 7px;
+    -webkit-appearance: button;
+  cursor: pointer;
+  margin: 20px 7px 24px 0px;
+  background-color: #fbb942;
+  border: 1px solid #ffb942;
+  margin-top: 25px;
 }
 
 h5, .h5 {
