@@ -1,5 +1,7 @@
 == README
 
+Hambone's Catering App
+
 TECHNOLOGIES USED:
 
 - Ruby on Rails (Ruby 4)
