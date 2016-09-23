@@ -1,6 +1,6 @@
-== README ==
+== README
 
-technologies used:
+TECHNOLOGIES USED:
 
 - Ruby on Rails (Ruby 4)
 - Html5
@@ -9,15 +9,15 @@ technologies used:
 - Heroku
 - Git
 
-Links:
+LINKS:
 
-Trello - https://trello.com/b/0jN7nRb7/catering-crud-app
-Heroku - https://cater-hambones.herokuapp.com/
+- Trello  https://trello.com/b/0jN7nRb7/catering-crud-app
+- Heroku  https://cater-hambones.herokuapp.com/
 
 
-Installation Instructions:
+INSTALLATION INSTRUCTIONS:
 
-1. Deploy Application using Heroku
+1. Deploy app using Heroku link provided above
 2. Application dependent on information provided through Sign Up or Log In
 3. Sign up as a customer providing details required
 4. Start an order
@@ -28,23 +28,22 @@ Installation Instructions:
 9. Receive email confirmation with order details
 
 
-Unsolved Problems:
+UNSOLVED PROBLEMS:
 
-1. Still hoping to add e-commerce to the site allowing customers to pay online
-2. Cleaning up the menu view through the addition of categories selected categorial views ex: Meats
-3. Addition of another model, Restaurant, in order to provide a choice for picking up food at either restaurant location.
-4. Additional features including delivery price and price of waiting service if customer so chooses
-4. Creation of an Admin User that has the ability to update the menu easily
-5. General debugging of application
-6. Addition of text-box for additional information
-7. Creation of a landing page for Home tab in navigation bar
-8. Eventually would like the addition of images for each menu item
-9. Need the addition of Action Mailer in order to give customers a receipt of their order
+- Still hoping to add e-commerce to the site allowing customers to pay online
+- Cleaning up the menu view through the addition of categories selected categorial views ex: Meats
+- Addition of another model, Restaurant, in order to provide a choice for picking up food at either restaurant location.
+- Additional features including delivery price and price of waiting service if customer so chooses
+- Creation of an Admin User that has the ability to update the menu easily
+- General debugging of application
+- Addition of text-box for additional information
+- Creation of a landing page for Home tab in navigation bar
+- Eventually would like the addition of images for each menu item
+- Need the addition of Action Mailer in order to give customers a receipt of their order
 
 
 Things you may want to cover:
 
-* Ruby version
 
 * System dependencies
 
@@ -58,9 +57,6 @@ Things you may want to cover:
 
 * Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
-
-* ...
 
 
 Please feel free to use a different markup language if you do not plan to run

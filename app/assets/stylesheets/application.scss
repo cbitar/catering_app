@@ -45,16 +45,23 @@ h1, h2, h3, p {
   border-radius: 4px;
   background-color: rgba(0, 0, 0, 0.72);
 }
+.navbar-nav > li > a {
+  padding-top: 62px;
+  padding-bottom: 5px;
+}
 
 .btn-success {
-    color: white;
-    background-color: #5cb85c;
-    border-color: #4cae4c;
-    margin-top: 78px;
+  color: white;
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+  margin-top: 78px;
 }
 
  a:hover {
   background-color: #ffb942;
+}
+.landing-text {
+  float: right;
 }
 
 img {
